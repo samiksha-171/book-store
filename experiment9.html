@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 9 - CSS Background and Link Styles</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px 30px 70px;
+            background-color: white;
+            color: black;
+        }
+
+        .container {
+            border: 1px solid gray;
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        /* Background image properties */
+        .box {
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px 0;
+            padding: 5px;
+            background-image: url("https://www.w3schools.com/cssref/paper.gif");
+            background-position: left top;
+        }
+
+        .repeat {
+            background-repeat: repeat;
+        }
+
+        .repeat-x {
+            background-repeat: repeat-x;
+        }
+
+        .repeat-y {
+            background-repeat: repeat-y;
+        }
+
+        .no-repeat {
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Hyperlink pseudo-classes */
+        a:link {
+            color: orange;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: purple;
+        }
+
+        .links p {
+            margin: 15px 0;
+        }
+
+        /* Existing footer styling */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f6c18b;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>1) Controlling Background Repetition</h2>
+
+        <div class="box repeat">
+            <b>background-repeat: repeat</b>
+        </div>
+
+        <div class="box repeat-x">
+            <b>background-repeat: repeat-x</b>
+        </div>
+
+        <div class="box repeat-y">
+            <b>background-repeat: repeat-y</b>
+        </div>
+
+        <div class="box no-repeat">
+            <b>background-repeat: no-repeat</b>
+        </div>
+
+        <h2>2) Link Styles</h2>
+
+        <div class="links">
+            <p>
+                <a href="https://example.com/page1">
+                    Unvisited link (orange)
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.wikipedia.org/">
+                    Visited link (red)
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.google.com/">
+                    Hover over me (blue, underlined)
+                </a>
+            </p>
+
+            <p>
+                <a href="https://example.org/page4">
+                    Click and hold me (purple)
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        Samiksha | 2501920110327
+        <br>
+        <a href="https://github.com/samiksha-171/book-store"
+           target="_blank">GitHub</a>
+        |
+        <a href="https://book-store-git-main-web-dev-a7e6.vercel.app/"
+           target="_blank">Live Website</a>
+    </footer>
+
+</body>
+</html>
