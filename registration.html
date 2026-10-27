@@ -53,20 +53,20 @@
             font-size: 14px;
             box-sizing: border-box;
         }
-        
+
     </style>
 </head>
 
 <body>
 
-<form>
+<form id="registrationForm">
     <h2>Registration Form</h2>
 
     <label>Name:</label>
-    <input type="text" name="name"><br>
+    <input type="text" name="name" required><br>
 
     <label>Password:</label>
-    <input type="password" name="password"><br>
+    <input type="password" name="password" required><br>
 
     <label>E-mail:</label>
     <input type="text" name="email"><br>
@@ -117,16 +117,78 @@
     <center>
         <input class="btn" type="submit" value="Register">
         <input class="btn" type="reset" value="Reset">
+
+        <p id="message"></p>
     </center>
 
 </form>
 
 <footer>
-         Samiksha     |     2501920110327         
-         <p>Github repo URL: <a href="https://github.com/samiksha-171/book-store" target="_blank"> Github</a> </p>         
-         Live Website: <a href="https://book-store-git-main-web-dev-a7e6.vercel.app/" target="_blank">Live Website</a>
-        
-</footer> 
+    Samiksha | 2501920110327
+
+    <p>Github repo URL:
+        <a href="https://github.com/samiksha-171/book-store"
+           target="_blank">Github</a>
+    </p>
+
+    Live Website:
+    <a href="https://book-store-git-main-web-dev-a7e6.vercel.app/"
+       target="_blank">Live Website</a>
+</footer>
+
+<script>
+    const form = document.getElementById("registrationForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = form.elements["name"].value.trim();
+        const password = form.elements["password"].value;
+        const email = form.elements["email"].value.trim();
+        const phone = form.elements["phone"].value.trim();
+
+        // Name Validation
+        if (!/^[A-Za-z]{6,}$/.test(name)) {
+            message.style.color = "red";
+            message.textContent =
+                "Error: Name must contain only alphabets and at least 6 characters.";
+            return;
+        }
+
+        // Password Validation
+        if (password.length < 6) {
+            message.style.color = "red";
+            message.textContent =
+                "Error: Password must be at least 6 characters long.";
+            return;
+        }
+
+        // E-mail Validation
+        if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+            message.style.color = "red";
+            message.textContent =
+                "Error: Please enter a valid E-mail ID.";
+            return;
+        }
+
+        // Phone Number Validation
+        if (!/^[0-9]{10}$/.test(phone)) {
+            message.style.color = "red";
+            message.textContent =
+                "Error: Phone number must contain exactly 10 digits.";
+            return;
+        }
+
+        // Success Message
+        message.style.color = "green";
+        message.textContent = "Registration Successful!";
+    });
+
+    form.addEventListener("reset", function() {
+        message.textContent = "";
+    });
+</script>
 
 </body>
 </html>
