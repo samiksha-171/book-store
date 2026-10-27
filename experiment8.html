@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 8 - CSS Styling</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        h2 {
+            font-family: "Trebuchet MS", sans-serif;
+            color: #5b2c06;
+            font-style: italic;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border: 2px solid #8b4513;
+            border-radius: 12px;
+        }
+
+        .book-section {
+            padding: 20px;
+            margin-top: 20px;
+            background-image: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d");
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .book-section h2,
+        .book-section p {
+            background-color: rgba(255, 255, 255, 0.88);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            color: #b22222;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        a {
+            color: #0645ad;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #b22222;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px black;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to BookHub</h1>
+
+    <div class="container">
+        <h2>About BookHub</h2>
+
+        <p>
+            BookHub is an online platform for book lovers.
+            It helps readers explore different books and discover
+            new stories, knowledge and ideas.
+        </p>
+
+        <p class="highlight">
+            "A room without books is like a body without a soul."
+        </p>
+
+        <div class="book-section">
+            <h2>Explore the World of Books</h2>
+            <p>
+                Read, learn and discover something new every day.
+                Books are your gateway to knowledge and imagination.
+            </p>
+        </div>
+
+        <h2>Useful Links</h2>
+        <p>
+            Visit
+            <a href="https://www.gutenberg.org/" target="_blank">
+                Project Gutenberg
+            </a>
+            to explore free eBooks.
+        </p>
+    </div>
+
+    <footer>
+        Samiksha | Roll No: 2501920110327
+        <p>
+            <a href="https://github.com/samiksha-171/book-store">
+                GitHub Repository
+            </a>
+            |
+            <a href="https://book-store-git-main-web-dev-a7e6.vercel.app/">
+                Deployed Website
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
